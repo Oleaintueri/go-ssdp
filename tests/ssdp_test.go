@@ -1,4 +1,4 @@
-package ssdp
+package tests
 
 import (
 	"bytes"

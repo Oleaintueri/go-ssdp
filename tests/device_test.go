@@ -1,7 +1,8 @@
-package ssdp
+package tests
 
 import (
 	"bytes"
+	"github.com/Oleaintueri/go-ssdp/pkg/ssdp"
 	"io/ioutil"
 	"net/url"
 	"path/filepath"
@@ -9,7 +10,7 @@ import (
 )
 
 func Test_reduceOnLocation(t *testing.T) {
-	responses := make([]SearchResponse, 3, 3)
+	responses := make([]ssdp.SearchResponse, 3, 3)
 	responses[0].Location, _ = url.Parse("http://192.168.0.10:80/description.xml")
 	responses[1].Location, _ = url.Parse("http://192.168.0.11:80/description.xml")
 	responses[2].Location, _ = url.Parse("http://192.168.0.10:80/description.xml")
@@ -22,13 +23,13 @@ func Test_reduceOnLocation(t *testing.T) {
 }
 
 func Test_parseDecriptionXml(t *testing.T) {
-	descriptionFile := filepath.Join(".", "test_responses", "hue_description.xml")
+	descriptionFile := filepath.Join(".", "example/responses", "hue_description.xml")
 	fileBytes, err := ioutil.ReadFile(descriptionFile)
 	if err != nil {
 		t.Fatal("Error reading in stub description.xml.", err)
 	}
 
-	device, err := decodeDescription(bytes.NewReader(fileBytes))
+	device, err := ssdp.decodeDescription(bytes.NewReader(fileBytes))
 	if err != nil {
 		t.Fatal("Could not decode description.", err)
 	}
