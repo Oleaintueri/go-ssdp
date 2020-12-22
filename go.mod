@@ -1,3 +1,3 @@
-module github.com/Oleaintueri/ssdp
+module github.com/Oleaintueri/gossdp
 
 go 1.14
