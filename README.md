@@ -1,5 +1,13 @@
 <h1 align="center">Go SSDP client</h1>
 
+<p align="center">
+    <img alt="GitHub" src="https://img.shields.io/github/license/Oleaintueri/gossdp?style=flat-square">
+    <img alt="GitHub go.mod Go version"
+         src="https://img.shields.io/github/go-mod/go-version/Oleaintueri/gossdp?style=flat-square">
+    <img alt="GitHub tag (latest SemVer)"
+         src="https://img.shields.io/github/v/tag/Oleaintueri/gossdp?style=flat-square">
+</p>
+
 A library that implements the client side of SSDP (Simple Service Discovery Protocol).
 
 This is an altered version from the original by [Ben Curren](https://github.com/bcurren/go-ssdp).
