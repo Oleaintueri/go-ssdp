@@ -1,16 +1,21 @@
-<h1 align="center">go-ssdp</h1>
+<h1 align="center">Go SSDP client</h1>
 
 A library that implements the client side of SSDP (Simple Service Discovery Protocol).
 
-Please see [godoc.org](http://godoc.org/github.com/bcurren/go-ssdp) for a detailed API description.
-
 This is an altered version from the original by [Ben Curren](https://github.com/bcurren/go-ssdp).
+
+Build with :heart: by
+
+<a href="https://oleaintueri.com"><img src="https://oleaintueri.com/images/oliv.svg" width="60px"/><img width="200px" style="padding-bottom: 10px" src="https://oleaintueri.com/images/oleaintueri.svg"/></a>
+
+[Oleaintueri](https://oleaintueri.com) is sponsoring the development and maintenance of this project within their organisation.
+
 
 ## Getting Started
 
 ### Installation
 
-    GOMODULE111=on go get github.com/Oleaintueri/go-ssdp
+    GOMODULE111=on go get github.com/Oleaintueri/gossdp
 
 
 ### Usage
@@ -19,10 +24,10 @@ This is an altered version from the original by [Ben Curren](https://github.com/
 package main
 
 import (
-	"github.com/Oleaintueri/go-ssdp"
-	"github.com/Oleaintueri/go-ssdp/pkg/ssdp"
-	"time"
 	"fmt"
+	"github.com/Oleaintueri/gossdp"
+	"github.com/Oleaintueri/gossdp/pkg/ssdp"
+	"time"
 )
 
 func main() {
@@ -52,10 +57,9 @@ func main() {
 }
 ```
 
-## How to contribute
+### How to contribute
 
-* Fork
+* Fork the repository
+* Create an issue with your desired update
 * Write tests and code
-* Run go fmt
 * Submit a pull request
-
